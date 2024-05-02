@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="quiz.component.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Tech Companies Quiz</h1>
+  <div id="timer" class="text-center mb-3">{{ timeLeft }}</div>
+  <div class="question">{{ questions[currentQuestionIndex].question }}</div>
+  <div class="options">
+    <button class="btn btn-primary" *ngFor="let option of questions[currentQuestionIndex].options" (click)="checkAnswer(option)">{{ option }}</button>
+  </div>
+</div>
+
+<script src="quiz.component.ts"></script>
+</body>
+</html>
